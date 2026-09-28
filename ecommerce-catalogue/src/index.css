@@ -1,1 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-body: "Space Grotesk", sans-serif;
+  --font-display: "Barlow Condensed", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
