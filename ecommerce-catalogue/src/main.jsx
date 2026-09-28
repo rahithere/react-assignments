@@ -4,12 +4,25 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 
 import './index.css'
 import App from './App.jsx'
+import AppLayout from './layout/AppLayout.jsx'
+import Products from './pages/Products.jsx'
+import ProductDetails from './pages/ProductDetails.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <AppLayout />,
+    children: [
+      {
+        index: true,
+        element: <Products />
+      },
+      {
+        path: 'products/:slug',
+        element: <ProductDetails />
+      }
+    ]
   }
 ])
 
